@@ -6,7 +6,7 @@ test('Practice Form Test', async ({browser})=>
     const context = await browser.newContext();
     const page = await context.newPage();
 
-    //#region Locators
+    //#region Locators & FilePaths
     const firstnameLocator = page.locator("//input[@id='firstName']");
     const lastnameLocator = page.locator("//input[@id='lastName']");
     const useremailLocator = page.locator("//input[@id='userEmail']");
@@ -25,6 +25,8 @@ test('Practice Form Test', async ({browser})=>
 
     //Open URL
     await page.goto("https://demoqa.com/automation-practice-form");
+    
+    //Filling the form
     await firstnameLocator.type("Talha");
     await lastnameLocator.type("TT");
     await useremailLocator.type("Talha@gmail.com");
