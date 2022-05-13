@@ -27,6 +27,7 @@ test('text-box Test', async ({browser})=>
     await submitbuttonLocator.click();
 
     await page.close();
+    await context.close();
     console.log("Run Me 2");
 });
 console.log("Run Me 3");
